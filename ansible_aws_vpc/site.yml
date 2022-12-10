@@ -1,0 +1,19 @@
+---
+- name: intoinfinity VPC setup
+  hosts: localhost
+  conection: local
+  gather_facts: False
+  tasks:
+    - name: Import VPC variables
+      include_vars: vars/vpc_variables
+
+    - name: Creating VPC
+      ec2_vpc_net:
+        name: "{{vpc_name}}"
+        cidr_block: "{{CIDR}}"
+        region: "{{region}}"
+        instance_tenancy: default
+        tags:
+          Name: intoinfinity-vpc
+        state: present
+

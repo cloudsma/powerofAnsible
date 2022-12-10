@@ -1,0 +1,22 @@
+vpc_name: "intoinfinity-vpc"
+
+#Range
+CIDR: "172.20.0.0/16"
+
+#Subnets
+PublicSubnetA: "172.16.1.0/24"
+PublicSubnetB: "172.16.2.0/24"
+PublicSubnetC: "172.16.3.0/24"
+PrivateSubnetA: "172.16.4.0/24"
+PrivateSubnetB: "172.16.5.0/24"
+PrivateSubnetC: "172.16.6.0/24"
+
+#Region
+region: "us-east-2"
+
+#Zone
+zone1: "us-east-2a"
+zone2: "us-east-2b"
+zone3: "us-east-2c"
+
+state: present
