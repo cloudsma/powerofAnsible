@@ -26,6 +26,7 @@
         state: present
         vpc_id: vpcout.vpc.id
         cidr: PublicSubnetA
+        region: "{{region}}"
         az: zone1
         map_public: yes
         tags:
@@ -37,6 +38,7 @@
         state: present
         vpc_id: vpcout.vpc.id
         cidr: PublicSubnetB
+        region: "{{region}}"
         az: zone2
         map_public: yes
         tags:
@@ -48,6 +50,7 @@
         state: present
         vpc_id: vpcout.vpc.id
         cidr: PublicSubnetC
+        region: "{{region}}"
         az: zone3
         map_public: yes
         tags:
@@ -60,6 +63,7 @@
         state: present
         vpc_id: vpcout.vpc.id
         cidr: PrivateSubnetA
+        region: "{{region}}"
         az: zone1
         tags:
           Name: PrivateSubnetA
@@ -70,6 +74,7 @@
         state: present
         vpc_id: vpcout.vpc.id
         cidr: PrivateSubnetB
+        region: "{{region}}"
         az: zone2
         tags:
           Name: PrivateSubnetC
@@ -80,6 +85,7 @@
         state: present
         vpc_id: vpcout.vpc.id
         cidr: PrivateSubnetC
+        region: "{{region}}"
         az: zone3
         tags:
           Name: PrivateSubnetC
