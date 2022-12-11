@@ -112,7 +112,7 @@
         subnets:
           - "{{ PublicSubnetA.subnet.id }}"
           - "{{ PublicSubnetB.subnet.id }}"
-          - "{{ PublicSubnetC.subnet_id }}"
+          - "{{ PublicSubnetC.subnet.id }}"
         routes:
           - dest: 0.0.0.0/0
         gateway_id: "{{ igw.gateway_id }}"
