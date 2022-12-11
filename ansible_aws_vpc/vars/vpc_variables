@@ -15,8 +15,9 @@ PrivateSubnetC: 172.16.6.0/24
 region: us-east-2
 
 #Zone
-zone1: us-east-2a
-zone2: us-east-2b
-zone3: us-east-2c
+zone :
+ - us-east-2a
+ - us-east-2b
+ - us-east-2c
 
 state: present

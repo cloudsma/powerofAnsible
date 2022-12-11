@@ -25,9 +25,9 @@
       ec2_vpc_subnet:
         state: present
         vpc_id: vpcout.vpc.id
+        az: zone[0]
         cidr: PublicSubnetA
         region: "{{region}}"
-        az: zone1
         map_public: yes
         tags:
           Name: PublicSubnetA
@@ -37,9 +37,9 @@
       ec2_vpc_subnet:
         state: present
         vpc_id: vpcout.vpc.id
+        az: zone[1]
         cidr: PublicSubnetB
         region: "{{region}}"
-        az: zone2
         map_public: yes
         tags:
           Name: PublicSubnetB
@@ -49,9 +49,9 @@
       ec2_vpc_subnet:
         state: present
         vpc_id: vpcout.vpc.id
+        az: zone[2]
         cidr: PublicSubnetC
         region: "{{region}}"
-        az: zone3
         map_public: yes
         tags:
           Name: PublicSubnetC
@@ -62,9 +62,9 @@
       ec2_vpc_subnet:
         state: present
         vpc_id: vpcout.vpc.id
+        az: zone[0]
         cidr: PrivateSubnetA
         region: "{{region}}"
-        az: zone1
         tags:
           Name: PrivateSubnetA
       register: PrivateSubnetA
@@ -73,9 +73,9 @@
       ec2_vpc_subnet:
         state: present
         vpc_id: vpcout.vpc.id
+        az: zone[1]
         cidr: PrivateSubnetB
         region: "{{region}}"
-        az: zone2
         tags:
           Name: PrivateSubnetC
       register: PrivateSubnetB
@@ -84,9 +84,9 @@
       ec2_vpc_subnet:
         state: present
         vpc_id: vpcout.vpc.id
+        az: zone[2]
         cidr: PrivateSubnetC
         region: "{{region}}"
-        az: zone3
         tags:
           Name: PrivateSubnetC
       register: PrivateSubnetC
