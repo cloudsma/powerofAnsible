@@ -126,5 +126,5 @@
     - name: Storing Output variables
       copy:
         content: "{{vpcout.vpc.id}}\n{{ PublicSubnetA.subnet.id }}\n{{ PublicSubnetB.subnet.id }}\n{{ PublicSubnetC.subnet.id }}\n{{ PrivateSubnetA.subnet.id }}\n{{ PrivateSubnetB.subnet.id }}\n{{ PrivateSubnetC.subnet.id }}\n{{ igw.gateway_id }}\n{{public_route_table.route_table.route_table_id}}"
-        dest: /var/vpc_out
+        dest: ./vpc_out
       
