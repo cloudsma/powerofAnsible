@@ -99,5 +99,5 @@
         state: present
         tags:
           Name: intoinfinity-igw
-        register: igw
+      register: igw
       
