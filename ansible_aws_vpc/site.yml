@@ -100,4 +100,21 @@
         tags:
           Name: intoinfinity-igw
       register: igw
+
+# Creating Route Table
+
+    - name: Set up public subnet route table
+      ec2_vpc_route_table:
+        vpc_id: vpc-1245678
+        region: us-west-1
+        tags:
+          Name: Public-RT
+        subnets:
+          - "{{ PublicSubnetA.subnet.id }}"
+          - "{{ PublicSubnetB.subnet.id }}"
+          - "{{ PublicSubnetC.subnet_id }}"
+        routes:
+          - dest: 0.0.0.0/0
+        gateway_id: "{{ igw.gateway_id }}"
+      register: public_route_table
       
