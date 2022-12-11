@@ -101,6 +101,9 @@
           Name: intoinfinity-igw
       register: igw
 
+    - debug:
+        var: igw
+
 # Creating Route Table
 
     - name: Set up public subnet route table
