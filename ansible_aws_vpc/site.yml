@@ -24,7 +24,7 @@
     - name: Create PublicSubnetA
       ec2_vpc_subnet:
         state: present
-        vpc_id: vpcout.vpc.id
+        vpc_id: "{{vpcout.vpc.id}}"
         az: "{{zone[0]}}"
         cidr: "{{PublicSubnetA}}"
         region: "{{region}}"
@@ -36,7 +36,7 @@
     - name: Create PublicSubnetB
       ec2_vpc_subnet:
         state: present
-        vpc_id: vpcout.vpc.id
+        vpc_id: "{{vpcout.vpc.id}}"
         az: "{{zone[1]}}"
         cidr: "{{PublicSubnetB}}"
         region: "{{region}}"
@@ -48,7 +48,7 @@
     - name: Create PublicSubnetC
       ec2_vpc_subnet:
         state: present
-        vpc_id: vpcout.vpc.id
+        vpc_id: "{{vpcout.vpc.id}}"
         az: "{{zone[2]}}"
         cidr: "{{PublicSubnetC}}"
         region: "{{region}}"
@@ -61,7 +61,7 @@
     - name: Create PrivateSubnetA
       ec2_vpc_subnet:
         state: present
-        vpc_id: vpcout.vpc.id
+        vpc_id: "{{vpcout.vpc.id}}"
         az: "{{zone[0]}}"
         cidr: "{{PrivateSubnetA}}"
         region: "{{region}}"
@@ -72,7 +72,7 @@
     - name: Create PrivateSubnetB
       ec2_vpc_subnet:
         state: present
-        vpc_id: vpcout.vpc.id
+        vpc_id: "{{vpcout.vpc.id}}"
         az: "{{zone[1]}}"
         cidr: "{{PrivateSubnetB}}"
         region: "{{region}}"
@@ -83,7 +83,7 @@
     - name: Create PrivateSubnetC
       ec2_vpc_subnet:
         state: present
-        vpc_id: vpcout.vpc.id
+        vpc_id: "{{vpcout.vpc.id}}"
         az: "{{zone[2]}}"
         cidr: "{{PrivateSubnetC}}"
         region: "{{region}}"
