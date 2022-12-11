@@ -18,5 +18,69 @@
         state: present
       register: vpcout
 
-    - debug:
-        var: vpcout
+    # - debug:
+    #     var: vpcout
+#Public Subnet A for VPC
+    - name: Create PublicSubnetA
+      ec2_vpc_subnet:
+        state: present
+        vpc_id: vpcout.vpc.id
+        cidr: PublicSubnetA
+        az: zone1
+        map_public: yes
+        tags:
+          Name: PublicSubnetA
+      register: PublicSubnetA
+#Public Subnet B for VPC
+    - name: Create PublicSubnetB
+      ec2_vpc_subnet:
+        state: present
+        vpc_id: vpcout.vpc.id
+        cidr: PublicSubnetB
+        az: zone2
+        map_public: yes
+        tags:
+          Name: PublicSubnetB
+      register: PublicSubnetB
+#Public Subnet C for VPC
+    - name: Create PublicSubnetC
+      ec2_vpc_subnet:
+        state: present
+        vpc_id: vpcout.vpc.id
+        cidr: PublicSubnetC
+        az: zone3
+        map_public: yes
+        tags:
+          Name: PublicSubnetC
+      register: PublicSubnetC
+
+#Private Subnet A for VPC
+    - name: Create PrivateSubnetA
+      ec2_vpc_subnet:
+        state: present
+        vpc_id: vpcout.vpc.id
+        cidr: PrivateSubnetA
+        az: zone1
+        tags:
+          Name: PrivateSubnetA
+      register: PrivateSubnetA
+#Private Subnet B for VPC
+    - name: Create PrivateSubnetB
+      ec2_vpc_subnet:
+        state: present
+        vpc_id: vpcout.vpc.id
+        cidr: PrivateSubnetB
+        az: zone2
+        tags:
+          Name: PrivateSubnetC
+      register: PrivateSubnetB
+#Private Subnet C for VPC
+    - name: Create PrivateSubnetC
+      ec2_vpc_subnet:
+        state: present
+        vpc_id: vpcout.vpc.id
+        cidr: PrivateSubnetC
+        az: zone3
+        tags:
+          Name: PrivateSubnetC
+      register: PrivateSubnetC
