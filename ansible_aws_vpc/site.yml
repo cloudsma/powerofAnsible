@@ -94,9 +94,10 @@
 # Internet Gateway for public subnet
     - name: Internet Gateway
       ec2_vpc_igw:
-      vpc_id: "{{vpcout.vpc.id}}"
-      region: "{{region}}"
-      state: present
-      register: igw
-      tags:
-        Name: intoinfinity-igw
+        vpc_id: "{{vpcout.vpc.id}}"
+        region: "{{region}}"
+        state: present
+        tags:
+          Name: intoinfinity-igw
+        register: igw
+      
