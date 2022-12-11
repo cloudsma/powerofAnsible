@@ -108,8 +108,8 @@
 
     - name: Set up public subnet route table
       ec2_vpc_route_table:
-        vpc_id: vpc-1245678
-        region: us-west-1
+        vpc_id: "{{vpcout.vpc.id}}"
+        region: "{{region}}"
         tags:
           Name: Public-RT
         subnets:
